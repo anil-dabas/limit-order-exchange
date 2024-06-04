@@ -9,7 +9,7 @@ public class OrderBook {
 
     public OrderBook() {
         buyOrders = new PriorityQueue<>((a, b) -> Integer.compare(b.getPrice(), a.getPrice()));
-        sellOrders = new PriorityQueue<>();
+        sellOrders = new PriorityQueue<>((a, b) -> Integer.compare(a.getPrice(), b.getPrice()));
     }
 
     public PriorityQueue<Order> getBuyOrders() {
