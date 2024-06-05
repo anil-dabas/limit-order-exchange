@@ -1,5 +1,6 @@
 package com.exchange.test.order;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
@@ -9,7 +10,7 @@ public class OrderBook {
 
     public OrderBook() {
         buyOrders = new PriorityQueue<>((a, b) -> Integer.compare(b.getPrice(), a.getPrice()));
-        sellOrders = new PriorityQueue<>();
+        sellOrders = new PriorityQueue<>(Comparator.comparingInt(Order::getPrice));
     }
 
     public PriorityQueue<Order> getBuyOrders() {
