@@ -1,2 +1,2 @@
 #!/bin/bash
-./gradlew run < "$1"
+./gradlew run

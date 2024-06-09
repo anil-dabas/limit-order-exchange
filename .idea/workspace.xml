@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fec4f10-6b30-4820-9d8c-929cbfd2224f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exchange" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/ExchangeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2.txt" afterDir="false" />
+    <list default="true" id="0fec4f10-6b30-4820-9d8c-929cbfd2224f" name="Changes" comment="Adding Test cases for OrderProcessor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exchange/test/order/AbstractIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exchange/test/order/IntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test_cases/input/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test_cases/input/2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test_cases/output/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test_cases/output/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exchange" beforeDir="false" afterPath="$PROJECT_DIR$/exchange" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exchange/test/ExchangeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/ExchangeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exchange/test/order/OrderProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -45,9 +40,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kronographTL&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/anil-dabas/limit-order-exchange.git&quot;,
+    &quot;accountId&quot;: &quot;b8e8b825-ef40-4e14-8968-397fb8b17f47&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2hPdlDIGW1C7VFkn6u3E5LpVK9A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -59,21 +66,34 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.OrderProcessorEdgeCasesTest.executor": "Run",
+    "Gradle.OrderProcessorTest.executor": "Coverage",
+    "Gradle.OrderProcessorTest.testBuyOrderWithVolumeZero.executor": "Run",
+    "Gradle.OrderProcessorTest.testSellOrderWithPriceZero.executor": "Debug",
     "Gradle.limit-order-exchange [:ExchangeApplication.main()].executor": "Run",
     "Gradle.limit-order-exchange [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ad/Documents/Anil Official/workspace/my space/old/limit-order-exchange"
+    "last_opened_file_path": "/Users/ad/Documents/Anil Official/workspace/my space/old/limit-order-exchange/src/test/resources"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.exchange.test.order" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.OrderProcessorTest">
     <configuration name="ExchangeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.exchange.test.ExchangeApplication" />
       <module name="limit-order-exchange.main" />
@@ -87,8 +107,108 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderProcessorEdgeCasesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.exchange.test.order.OrderProcessorEdgeCasesTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderProcessorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.exchange.test.order.OrderProcessorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderProcessorTest.testBuyOrderWithVolumeZero" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.exchange.test.order.OrderProcessorTest.testBuyOrderWithVolumeZero&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderProcessorTest.testSellOrderWithPriceZero" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.exchange.test.order.OrderProcessorTest.testSellOrderWithPriceZero&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderProcessorTest" />
+        <item itemvalue="Gradle.OrderProcessorTest.testSellOrderWithPriceZero" />
+        <item itemvalue="Gradle.OrderProcessorTest.testBuyOrderWithVolumeZero" />
+        <item itemvalue="Gradle.OrderProcessorEdgeCasesTest" />
         <item itemvalue="Application.ExchangeApplication" />
       </list>
     </recent_temporary>
@@ -102,9 +222,78 @@
       <option name="presentableId" value="Default" />
       <updated>1717499797719</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit for Exchange project">
+      <option name="closed" value="true" />
+      <created>1717513628945</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717513628945</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit for Exchange project">
+      <option name="closed" value="true" />
+      <created>1717516348023</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717516348023</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial Commit for Exchange project">
+      <option name="closed" value="true" />
+      <created>1717516767618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717516767619</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial Commit for Exchange project">
+      <option name="closed" value="true" />
+      <created>1717516799576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717516799576</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding Test cases for OrderProcessor">
+      <option name="closed" value="true" />
+      <created>1717606447495</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717606447495</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial Commit for Exchange project" />
+    <MESSAGE value="Adding Test cases for OrderProcessor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Test cases for OrderProcessor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/exchange/test/order/OrderProcessorTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/limit_order_exchange$OrderProcessorTest.ic" NAME="OrderProcessorTest Coverage Results" MODIFIED="1717606378450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

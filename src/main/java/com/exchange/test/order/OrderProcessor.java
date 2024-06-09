@@ -1,6 +1,5 @@
 package com.exchange.test.order;
 
-
 public class OrderProcessor {
     private final OrderBook orderBook;
 

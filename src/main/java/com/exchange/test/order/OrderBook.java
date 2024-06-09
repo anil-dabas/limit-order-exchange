@@ -1,16 +1,14 @@
 package com.exchange.test.order;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class OrderBook {
     private final PriorityQueue<Order> buyOrders;
     private final PriorityQueue<Order> sellOrders;
 
     public OrderBook() {
-        buyOrders = new PriorityQueue<>((a, b) -> Integer.compare(b.getPrice(), a.getPrice()));
-        sellOrders = new PriorityQueue<>(Comparator.comparingInt(Order::getPrice));
+        buyOrders = new PriorityQueue<>(Comparator.comparingInt(Order::getPrice).reversed().thenComparingLong(Order::getTimestamp));
+        sellOrders = new PriorityQueue<>(Comparator.comparingInt(Order::getPrice).thenComparingLong(Order::getTimestamp));
     }
 
     public PriorityQueue<Order> getBuyOrders() {
@@ -30,21 +28,26 @@ public class OrderBook {
     }
 
     public void printOrderBook() {
-        Iterator<Order> buyIterator = buyOrders.iterator();
-        Iterator<Order> sellIterator = sellOrders.iterator();
+        List<Order> sortedBuyOrders = new ArrayList<>(buyOrders);
+        List<Order> sortedSellOrders = new ArrayList<>(sellOrders);
 
-        while (buyIterator.hasNext() || sellIterator.hasNext()) {
-            if (buyIterator.hasNext()) {
-                Order buyOrder = buyIterator.next();
-                System.out.printf("%9d %6d | ", buyOrder.getVolume(), buyOrder.getPrice());
+        sortedBuyOrders.sort(Comparator.comparingInt(Order::getPrice).reversed().thenComparingLong(Order::getTimestamp));
+        sortedSellOrders.sort(Comparator.comparingInt(Order::getPrice).thenComparingLong(Order::getTimestamp));
+
+        int maxSize = Math.max(sortedBuyOrders.size(), sortedSellOrders.size());
+
+        for (int i = 0; i < maxSize; i++) {
+            if (i < sortedBuyOrders.size()) {
+                Order buyOrder = sortedBuyOrders.get(i);
+                System.out.printf("%,11d %,6d | ", buyOrder.getVolume(), buyOrder.getPrice());
             } else {
-                System.out.print("                 | ");
+                System.out.printf("%18s | ","");
             }
-            if (sellIterator.hasNext()) {
-                Order sellOrder = sellIterator.next();
-                System.out.printf("%6d %9d%n", sellOrder.getPrice(), sellOrder.getVolume());
+            if (i < sortedSellOrders.size()) {
+                Order sellOrder = sortedSellOrders.get(i);
+                System.out.printf("%6d %,11d%n", sellOrder.getPrice(), sellOrder.getVolume());
             } else {
-                System.out.println();
+                System.out.printf("%18s\n","");
             }
         }
     }
