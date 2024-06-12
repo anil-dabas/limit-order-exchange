@@ -1,6 +1,7 @@
 package com.exchange.test.order;
 
 public class Order {
+
     private final String id;
     private final char side;
     private final int price;
